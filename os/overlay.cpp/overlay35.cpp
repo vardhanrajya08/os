@@ -1,6 +1,9 @@
-#include<stdio.h> #include<string.h> #include<unistd.h>
+#include <stdio.h> 
+#include <string.h> 
+#include <unistd.h>
+#include <stdlib.h>
 
-void main(int argc, char *argv[0]) { int pid;
+int main(int argc, char *argv[0]) { int pid;
 int err;
 int num_times;
 char num_times_str[5];
@@ -20,5 +23,5 @@ perror("Execl error: "); printf("This wouldn't print\n");
 } else { /* Parent process */ sleep(3);
 printf("Parent process: Running While loop Program\n"); execl("./loop", "./loop", (char *)num_times_str, (char *)0); printf("Won't reach here\n");
 }
-return;
+return 0;
 }
