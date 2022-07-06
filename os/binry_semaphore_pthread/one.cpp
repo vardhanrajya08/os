@@ -1,5 +1,10 @@
+
+
 // g++ semaphore.c -o semaphore -lpthread -lrt #include <stdio.h>
-#include <pthread.h> #include <semaphore.h> #include <unistd.h>
+#include <pthread.h> 
+#include <semaphore.h> 
+#include <unistd.h>
+#include <stdio.h>
 
 sem_t mutex;
 
@@ -11,6 +16,7 @@ void* thread(void* arg)
 
 //signal
 printf("\nJust Exiting...\n"); sem_post(&mutex);
+return 0;
 }
 int main()
 {
