@@ -1,5 +1,7 @@
 #include <iostream>
 #include <memory>
+#include <cstring>
+#include <string.h>
 using namespace std;
 // To allocate the memory to blocks as per Best fit
 // algorithm
